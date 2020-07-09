@@ -11,7 +11,7 @@ use Maatwebsite\Excel\Writer;
 
 class AppendViewToSheet implements ShouldQueue
 {
-    use Queueable, Dispatchable;
+    use Queueable;
 
     /**
      * @var TemporaryFile

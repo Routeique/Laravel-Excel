@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Writer;
 
 class QueueExport implements ShouldQueue
 {
-    use ExtendedQueueable, Dispatchable;
+    use ExtendedQueueable;
 
     /**
      * @var object

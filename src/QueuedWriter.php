@@ -54,7 +54,7 @@ class QueuedWriter
      * @param string|null  $writerType
      * @param array|string $diskOptions
      *
-     * @return \Illuminate\Foundation\Bus\PendingDispatch
+     * @return QueueExport
      */
     public function store($export, string $filePath, string $disk = null, string $writerType = null, $diskOptions = [])
     {
@@ -69,7 +69,7 @@ class QueuedWriter
             $diskOptions
         ));
 
-        return QueueExport::withChain($jobs->toArray())->dispatch($export, $temporaryFile, $writerType);
+        return (new QueueExport($export, $temporaryFile, $writerType))->chain($jobs->toArray());
     }
 
     /**

@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Writer;
 
 class AppendDataToSheet implements ShouldQueue
 {
-    use Queueable, Dispatchable, ProxyFailures;
+    use Queueable, ProxyFailures;
 
     /**
      * @var array

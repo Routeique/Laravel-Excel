@@ -11,7 +11,7 @@ use Maatwebsite\Excel\Writer;
 
 class AppendQueryToSheet implements ShouldQueue
 {
-    use Queueable, Dispatchable, ProxyFailures;
+    use Queueable, ProxyFailures;
 
     /**
      * @var TemporaryFile
